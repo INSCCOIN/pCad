@@ -1,13 +1,13 @@
 CC ?= gcc
-CFLAGS ?= -O2 -Wall -Wextra -lm
+CFLAGS ?= -O2 -Wall -Wextra
 PREFIX ?= /usr/local
 
-pGraph: pGraph.c
-	$(CC) -O2 -Wall -Wextra -o pGraph pGraph.c -lm
+pCad: pCad.c
+	$(CC) -O2 -Wall -Wextra -o pCad pCad.c -lm
 
-install: pGraph
+install: pCad
 	install -d $(DESTDIR)$(PREFIX)/bin
-	install -m 755 pGraph $(DESTDIR)$(PREFIX)/bin/pGraph
+	install -m 755 pCad $(DESTDIR)$(PREFIX)/bin/pCad
 
 clean:
-	rm -f pGraph
+	rm -f pCad
